@@ -3252,6 +3252,7 @@ object ombS: TombS
     }
   end
   object cancel: TImage
+    Cursor = crHandPoint
     Left = 23
     Height = 38
     Top = 428
@@ -3335,6 +3336,7 @@ object ombS: TombS
     }
   end
   object donate: TImage
+    Cursor = crHandPoint
     Left = 200
     Height = 38
     Top = 428
@@ -3416,11 +3418,13 @@ object ombS: TombS
     }
   end
   object ok: TImage
+    Cursor = crHandPoint
     Left = 472
     Height = 38
     Top = 428
     Width = 80
     Center = True
+    OnClick = okClick
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869639D07000089504E47
       0D0A1A0A0000000D494844520000004B0000002908060000007D72D4BB000001
@@ -3485,5 +3489,44 @@ object ombS: TombS
       A711615911B553E392B3829F01B6791927FD5ECDFF2C50F90ED22A7006B809E3
       3DF82CFD0344CDB7B55D06EA100000000049454E44AE426082
     }
+  end
+  object Edit1: TEdit
+    Left = 103
+    Height = 40
+    Top = 112
+    Width = 199
+    TabOrder = 0
+    Text = 'Edit1'
+  end
+  object Memo1: TMemo
+    Left = 399
+    Height = 75
+    Top = 122
+    Width = 84
+    BorderStyle = bsNone
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 1
+  end
+  object select: TOpenDialog
+    left = 22
+    top = 35
+  end
+  object Process1: TProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 65
+    top = 38
   end
 end

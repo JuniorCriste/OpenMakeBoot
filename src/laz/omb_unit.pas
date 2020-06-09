@@ -22,6 +22,8 @@ type
     donate: TImage;
     ok: TImage;
     logo: TImage;
+    select: TOpenDialog;
+    procedure okClick(Sender: TObject);
   private
 
   public
@@ -35,5 +37,28 @@ implementation
 
 {$R *.lfm}
 
+{ TombS }
+
+procedure TombS.okClick(Sender: TObject);
+begin
+
+end;
+
 end.
+
+
+procedure selectIso();
+begin
+
+end;
+
+procedure selectPd();
+begin
+
+end;
+
+procedure detectLanguage();
+begin
+
+end;
 
