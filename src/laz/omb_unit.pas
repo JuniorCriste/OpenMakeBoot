@@ -5,8 +5,8 @@ unit OMB_unit;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  Buttons;
+  Classes, SysUtils, FileUtil, UTF8Process, Process, Forms, Controls, Graphics, Dialogs,
+  ExtCtrls, Buttons;
 
 type
 
@@ -22,6 +22,7 @@ type
     donate: TImage;
     ok: TImage;
     logo: TImage;
+    myShell: TProcessUTF8;
     select: TOpenDialog;
     procedure okClick(Sender: TObject);
   private
@@ -40,8 +41,20 @@ implementation
 { TombS }
 
 procedure TombS.okClick(Sender: TObject);
+var
+  lang: TstringList;
 begin
+  lang := TStringList.create;
+  myShell.CommandLine := 'idioma.sh';
+  {myShell.Parameters.Add('echo $LANG');
 
+  myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];       }
+  myShell.Execute;
+  lang.LoadFromStream(myShell.Output);
+  lang.SaveToFile('lang.txt');
+
+  lang.Free;
+  myShell.Free;
 end;
 
 end.

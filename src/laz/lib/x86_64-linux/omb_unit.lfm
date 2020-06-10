@@ -3494,4 +3494,20 @@ object ombS: TombS
     left = 22
     top = 35
   end
+  object myShell: TProcessUTF8
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 64
+    top = 35
+  end
 end

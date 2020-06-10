@@ -3490,30 +3490,11 @@ object ombS: TombS
       3DF82CFD0344CDB7B55D06EA100000000049454E44AE426082
     }
   end
-  object Edit1: TEdit
-    Left = 103
-    Height = 40
-    Top = 112
-    Width = 199
-    TabOrder = 0
-    Text = 'Edit1'
-  end
-  object Memo1: TMemo
-    Left = 399
-    Height = 75
-    Top = 122
-    Width = 84
-    BorderStyle = bsNone
-    Lines.Strings = (
-      'Memo1'
-    )
-    TabOrder = 1
-  end
   object select: TOpenDialog
     left = 22
     top = 35
   end
-  object Process1: TProcess
+  object myShell: TProcessUTF8
     Active = False
     Options = []
     Priority = ppNormal
@@ -3526,7 +3507,7 @@ object ombS: TombS
     WindowTop = 0
     WindowWidth = 0
     FillAttribute = 0
-    left = 65
-    top = 38
+    left = 64
+    top = 35
   end
 end
