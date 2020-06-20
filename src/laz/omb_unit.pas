@@ -24,6 +24,7 @@ type
     logo: TImage;
     myShell: TProcessUTF8;
     select: TOpenDialog;
+    procedure cancelClick(Sender: TObject);
     procedure okClick(Sender: TObject);
   private
 
@@ -55,6 +56,11 @@ begin
 
   lang.Free;
   myShell.Free;
+end;
+
+procedure TombS.cancelClick(Sender: TObject);
+begin
+  ombS.Close;
 end;
 
 end.

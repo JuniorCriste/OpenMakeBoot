@@ -45,10 +45,10 @@ var
   lang: TstringList;
 begin
   lang := TStringList.create;
-  myShell.Executable := 'idioma.sh';
+  myShell.CommandLine := 'idioma.sh';
   {myShell.Parameters.Add('echo $LANG');
-   }
-  myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];
+
+  myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];       }
   myShell.Execute;
   lang.LoadFromStream(myShell.Output);
   lang.SaveToFile('lang.txt');
