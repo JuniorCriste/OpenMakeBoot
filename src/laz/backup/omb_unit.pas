@@ -24,6 +24,9 @@ type
     logo: TImage;
     myShell: TProcessUTF8;
     select: TOpenDialog;
+    procedure adrIsoClick(Sender: TObject);
+    procedure adrPdClick(Sender: TObject);
+    procedure cancelClick(Sender: TObject);
     procedure okClick(Sender: TObject);
   private
 
@@ -45,16 +48,35 @@ var
   lang: TstringList;
 begin
   lang := TStringList.create;
-  myShell.CommandLine := 'idioma.sh';
-  {myShell.Parameters.Add('echo $LANG');
-
-  myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];       }
+  myshell := TProcessUTF8.Create(nil);
+  myShell.Executable:= ('bash');
+  myShell.Parameters.Add('boanoitetux');
   myShell.Execute;
-  lang.LoadFromStream(myShell.Output);
-  lang.SaveToFile('lang.txt');
 
-  lang.Free;
+  {myShell.Parameters.Add('echo $LANG');
+  myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];
+
+
+  lang.LoadFromStream(myShell.Output);
+  lang.SaveToFile('lang.txt');       }
+   
   myShell.Free;
+  lang.Free;
+end;
+
+procedure TombS.cancelClick(Sender: TObject);
+begin
+  ombS.Close;
+end;
+
+procedure TombS.adrIsoClick(Sender: TObject);
+begin
+
+end;
+
+procedure TombS.adrPdClick(Sender: TObject);
+begin
+
 end;
 
 end.

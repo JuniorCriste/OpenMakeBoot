@@ -1,7 +1,7 @@
 object ombS: TombS
-  Left = 383
+  Left = 438
   Height = 505
-  Top = 134
+  Top = 117
   Width = 571
   AutoSize = True
   BorderStyle = bsSingle
@@ -3190,6 +3190,7 @@ object ombS: TombS
     Top = 312
     Width = 553
     Center = True
+    OnClick = adrPdClick
     Picture.Data = {
       1754506F727461626C654E6574776F726B47726170686963DA02000089504E47
       0D0A1A0A0000000D49484452000001EF0000001B080600000055FD0776000001
@@ -3224,6 +3225,7 @@ object ombS: TombS
     Top = 184
     Width = 552
     Center = True
+    OnClick = adrIsoClick
     Picture.Data = {
       1754506F727461626C654E6574776F726B47726170686963DA02000089504E47
       0D0A1A0A0000000D49484452000001EF0000001B080600000055FD0776000001
