@@ -49,7 +49,7 @@ var
 begin
   lang := TStringList.create;
   myshell := TProcessUTF8.Create(nil);
-  myShell.Executable:= ('bash');
+  myShell.Executable:= ('gnome-terminal');
   myShell.Parameters.Add('boanoitetux');
   myShell.Execute;
 
