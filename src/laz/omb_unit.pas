@@ -48,9 +48,13 @@ var
   lang: TstringList;
 begin
   lang := TStringList.create;
+
+
   myshell := TProcessUTF8.Create(nil);
   myShell.Executable:= ('xterm');
-  myShell.Parameters.Add('boanoitetux');
+  myShell.Parameters.Add('mkfs.vfat /dev/sdb1 ');
+  myShell.Parameters.Add('&& dd if=bodhi.iso of=/dev/sdb1 status=progress && sync ');
+  myShell.Parameters.Add('&& umount /dev/sdb1');
   myShell.Execute;
 
   {myShell.Parameters.Add('echo $LANG');

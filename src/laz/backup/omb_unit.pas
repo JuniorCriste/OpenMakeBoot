@@ -46,11 +46,13 @@ implementation
 procedure TombS.okClick(Sender: TObject);
 var
   lang: TstringList;
+  scrpt: string;
 begin
   lang := TStringList.create;
+  scrpt:= 'boanoitetux';
   myshell := TProcessUTF8.Create(nil);
-  myShell.Executable:= ('gnome-terminal');
-  myShell.Parameters.Add('boanoitetux');
+  myShell.Executable:= ('xterm');
+  myShell.Parameters.Add(scrpt);
   myShell.Execute;
 
   {myShell.Parameters.Add('echo $LANG');
