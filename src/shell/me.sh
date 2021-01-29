@@ -1,0 +1,2 @@
+USUARIO=$(whoami)
+echo ${USUARIO}
