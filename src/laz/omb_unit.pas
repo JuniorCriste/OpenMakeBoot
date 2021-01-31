@@ -27,6 +27,7 @@ type
     procedure adrIsoClick(Sender: TObject);
     procedure adrPdClick(Sender: TObject);
     procedure cancelClick(Sender: TObject);
+    procedure donateClick(Sender: TObject);
     procedure okClick(Sender: TObject);
   private
 
@@ -71,6 +72,14 @@ end;
 procedure TombS.cancelClick(Sender: TObject);
 begin
   ombS.Close;
+end;
+
+procedure TombS.donateClick(Sender: TObject);
+Var S : String;
+begin
+
+    GetDir (0,S);
+    Writeln ('Current directory is : ',S);
 end;
 
 procedure TombS.adrIsoClick(Sender: TObject);

@@ -27,6 +27,7 @@ type
     procedure adrIsoClick(Sender: TObject);
     procedure adrPdClick(Sender: TObject);
     procedure cancelClick(Sender: TObject);
+    procedure donateClick(Sender: TObject);
     procedure okClick(Sender: TObject);
   private
 
@@ -46,13 +47,15 @@ implementation
 procedure TombS.okClick(Sender: TObject);
 var
   lang: TstringList;
-  scrpt: string;
 begin
   lang := TStringList.create;
-  scrpt:= 'boanoitetux';
+
+
   myshell := TProcessUTF8.Create(nil);
   myShell.Executable:= ('xterm');
-  myShell.Parameters.Add(scrpt);
+  myShell.Parameters.Add('mkfs.vfat /dev/sdb1 ');
+  myShell.Parameters.Add('&& dd if=bodhi.iso of=/dev/sdb1 status=progress && sync ');
+  myShell.Parameters.Add('&& umount /dev/sdb1');
   myShell.Execute;
 
   {myShell.Parameters.Add('echo $LANG');
@@ -69,6 +72,14 @@ end;
 procedure TombS.cancelClick(Sender: TObject);
 begin
   ombS.Close;
+end;
+
+procedure TombS.donateClick(Sender: TObject);
+Var S : String;
+begin
+  GetDir (0,S);
+  fnpd.Caption:= S;
+
 end;
 
 procedure TombS.adrIsoClick(Sender: TObject);

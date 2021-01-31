@@ -21,8 +21,8 @@
         <UnitName Value="OMB_unit"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="46"/>
-        <CursorPos X="32" Y="48"/>
+        <TopLine Value="71"/>
+        <CursorPos X="43" Y="82"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -41,7 +41,7 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="10" HistoryIndex="9">
+    <JumpHistory Count="15" HistoryIndex="14">
       <Position1>
         <Filename Value="omb_unit.pas"/>
         <Caret Line="64" Column="14" TopLine="62"/>
@@ -82,6 +82,26 @@
         <Filename Value="omb_unit.pas"/>
         <Caret Line="55" Column="31" TopLine="46"/>
       </Position10>
+      <Position11>
+        <Filename Value="omb_unit.pas"/>
+        <Caret Line="49" Column="32" TopLine="47"/>
+      </Position11>
+      <Position12>
+        <Filename Value="omb_unit.pas"/>
+        <Caret Line="110" TopLine="92"/>
+      </Position12>
+      <Position13>
+        <Filename Value="omb_unit.pas"/>
+        <Caret Line="83" Column="38" TopLine="73"/>
+      </Position13>
+      <Position14>
+        <Filename Value="omb_unit.pas"/>
+        <Caret Line="82" Column="3" TopLine="71"/>
+      </Position14>
+      <Position15>
+        <Filename Value="omb_unit.pas"/>
+        <Caret Line="81" Column="23" TopLine="71"/>
+      </Position15>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
