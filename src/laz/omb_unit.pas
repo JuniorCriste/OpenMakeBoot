@@ -58,12 +58,12 @@ begin
   myShell.Parameters.Add('&& umount /dev/sdb1');
   myShell.Execute;
 
-  {myShell.Parameters.Add('echo $LANG');
+  myShell.Parameters.Add('echo $LANG');
   myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];
 
 
   lang.LoadFromStream(myShell.Output);
-  lang.SaveToFile('lang.txt');       }
+  lang.SaveToFile('lang.txt');
    
   myShell.Free;
   lang.Free;

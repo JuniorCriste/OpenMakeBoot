@@ -54,16 +54,16 @@ begin
   myshell := TProcessUTF8.Create(nil);
   myShell.Executable:= ('xterm');
   myShell.Parameters.Add('mkfs.vfat /dev/sdb1 ');
-  myShell.Parameters.Add('&& dd if=bodhi.iso of=/dev/sdb1 status=progress && sync ');
+  myShell.Parameters.Add('&& dd if=tiny.iso of=/dev/sdb1 status=progress && sync ');
   myShell.Parameters.Add('&& umount /dev/sdb1');
   myShell.Execute;
 
-  {myShell.Parameters.Add('echo $LANG');
+  myShell.Parameters.Add('echo $LANG');
   myShell.Options:= myShell.Options + [poWaitOnExit, poUsePipes];
 
 
-  lang.LoadFromStream(myShell.Output);
-  lang.SaveToFile('lang.txt');       }
+ { lang.LoadFromStream(myShell.Output);
+  }lang.SaveToFile('lang.txt');
    
   myShell.Free;
   lang.Free;
