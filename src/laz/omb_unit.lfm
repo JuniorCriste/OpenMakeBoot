@@ -9,7 +9,7 @@ object ombS: TombS
   ClientHeight = 505
   ClientWidth = 571
   Position = poDesktopCenter
-  LCLVersion = '1.8.2.0'
+  LCLVersion = '2.0.6.0'
   object back: TImage
     Left = 0
     Height = 506

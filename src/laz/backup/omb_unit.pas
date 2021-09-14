@@ -77,9 +77,9 @@ end;
 procedure TombS.donateClick(Sender: TObject);
 Var S : String;
 begin
-  GetDir (0,S);
-  fnpd.Caption:= S;
 
+    GetDir (0,S);
+    Writeln ('Current directory is : ',S);
 end;
 
 procedure TombS.adrIsoClick(Sender: TObject);
